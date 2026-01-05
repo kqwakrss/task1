@@ -13,4 +13,4 @@ Backend-сервіс для корпоративного сайту.
 
 ### Build image
 ```bash
-docker build -t fastapi-app .
+docker build -t task1 .
