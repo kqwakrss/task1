@@ -35,3 +35,7 @@ def pages_slug_title(slug: str):
         raise HTTPException (status_code = 404, detail = "Not found")
     title = page_title.get("title")
     return {"title": title}
+@app.get("/pages/{slug}/exists")
+def pages_slug_exist(slug: str):
+    exists: bool = slug in PAGES
+    return {"exists": exists}
